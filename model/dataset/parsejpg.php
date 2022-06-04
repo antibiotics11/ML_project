@@ -71,13 +71,14 @@ function main(): void {
 		}
 		
 		$filename = $fileinfo["filename"];
+		echo "Parsing ".$file."...".PHP_EOL;
 		
 		$color_json = to_color_json(__DIR__."/jpg/".$file);
 		file_put_contents(COLOR_DIR.$filename.".json", $color_json);
 		
 		$grayscale_json = to_grayscale_json($color_json);
 		file_put_contents(GRAYSCALE_DIR.$filename.".json", $grayscale_json);
-		
+		echo "Completed.".PHP_EOL;
 	}
 }
 

@@ -2,7 +2,7 @@ var tf = require("@tensorflow/tfjs-node"),
 	fs = require("fs");
 require("./png.js")();
 
-tf.loadLayersModel("file://trained/model.json").then(function(model) {
+tf.loadLayersModel("file://trained_model/model.json").then(function(model) {
 
 	var grayscale = fs.readFileSync("dataset/grayscale-json/1.json");
 	var grayscale_values = JSON.parse(grayscale);
@@ -19,7 +19,7 @@ tf.loadLayersModel("file://trained/model.json").then(function(model) {
 		console.log("["+i+"]["+j+"] => " + rgb_values[i][j - 1] + "\n");
 	}
 	
-	generate_png("colorize-test1-20.png", grayscale_values[0].length, grayscale_values.length, rgb_values);
+	generate_png("test/1-test2.png", grayscale_values[0].length, grayscale_values.length, rgb_values);
 
 });
 
