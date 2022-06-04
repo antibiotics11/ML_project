@@ -20,7 +20,7 @@ for (var i = 0; i < rgb_data.length; i++) {
 	}
 }
 
-console.log(grayscale_values);
+//console.log(grayscale_values);
 
 var rgb_tensor = tensorflow.tensor(rgb_values);
 var grayscale_tensor = tensorflow.tensor(grayscale_values);
@@ -37,7 +37,7 @@ var compileParam = {
 model.compile(compileParam);
 
 var fitParam = {
-	epochs: 1,
+	epochs: 20,
 	callbacks: {
 		onEpochEnd:function(epoch, logs) {
 			console.log('epoch', epoch, logs);
