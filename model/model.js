@@ -15,7 +15,7 @@ var compileParam = {
 model.compile(compileParam);
 
 var fitParam = {
-	epochs: 2,
+	epochs: 70,
 	callbacks: {
 		onEpochEnd:function(epoch, logs) {
 			console.log('epoch', epoch, logs);
@@ -30,7 +30,7 @@ var rgb_values = [];
 var grayscale_values = [];
 var k = 0;
 
-for (var num = 1; num <= 5; num++) {
+for (var num = 1; num <= 1; num++) {
 	
 	var rgb_data = fs.readFileSync("dataset/color-json/"+num+".json", "utf8");
 	var grayscale_data = fs.readFileSync("dataset/grayscale-json/"+num+".json", "utf8");
@@ -52,13 +52,10 @@ for (var num = 1; num <= 5; num++) {
 
 }
 
-console.log(rgb_values.length + ", " + grayscale_values.length + "\n");
-
 console.log("Converting to tensor ... \n");
 var rgb_tensor = tensorflow.tensor(rgb_values);
 var grayscale_tensor = tensorflow.tensor(grayscale_values);
 
-console.log("Start fitting model ... \n");
 model.fit(grayscale_tensor, rgb_tensor, fitParam).then(function() {
 	model.save("file://trained_model");
 });
