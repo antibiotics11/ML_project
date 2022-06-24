@@ -1,6 +1,6 @@
 module.exports = function() {
 
-this.generate_png = function(filename, width, height, rgb_values) {
+this.png = function(filename, width, height, rgb_values) {
 
 	var fs = require("fs");
 	var PNG = require("pngjs").PNG;
@@ -29,5 +29,5 @@ this.generate_png = function(filename, width, height, rgb_values) {
 	return;
 
 };
-
+	
 }

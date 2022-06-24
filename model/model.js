@@ -1,8 +1,6 @@
 var tensorflow = require("@tensorflow/tfjs-node"),
 	fs = require("fs");
 
-// 모델 정의
-
 var X = tensorflow.input({ shape: [1] });
 var Y = tensorflow.layers.dense({ units: 3 }).apply(X);
 
@@ -22,9 +20,6 @@ var fitParam = {
 		}
 	}
 }
-
-
-// 데이터셋 입력
 
 var rgb_values = [];
 var grayscale_values = [];
