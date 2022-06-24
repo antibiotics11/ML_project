@@ -4,8 +4,8 @@
 
 ini_set("memory_limit", "-1");
 
-const COLOR_DIR = __DIR__."/color-json/";
-const GRAYSCALE_DIR = __DIR__."/grayscale-json/";
+const COLOR_DIR = __DIR__."/dataset/color-json/";
+const GRAYSCALE_DIR = __DIR__."/dataset/grayscale-json/";
 	
 function to_color_json(String $file): String {
 
@@ -56,7 +56,7 @@ function to_grayscale_json(String $color_json): String {
 
 function main(): void {
 	
-	$jpgfiles = scandir(__DIR__."/jpg/");
+	$jpgfiles = scandir(__DIR__."/dataset/jpg/");
 	
 	foreach ($jpgfiles as $file) {
 
@@ -73,7 +73,7 @@ function main(): void {
 		$filename = $fileinfo["filename"];
 		echo "Parsing ".$file."...".PHP_EOL;
 		
-		$color_json = to_color_json(__DIR__."/jpg/".$file);
+		$color_json = to_color_json(__DIR__."/dataset/jpg/".$file);
 		file_put_contents(COLOR_DIR.$filename.".json", $color_json);
 		
 		$grayscale_json = to_grayscale_json($color_json);
