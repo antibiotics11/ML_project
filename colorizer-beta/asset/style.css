@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	font-family: 'Raleway', sans-serif;
+}
+
+/** 컨텐츠 영역 */
+
+#content {
+	margin: 4%;
+	margin-top: 2%;
+}
+
+#head {
+	cursor: default;
+}
+
+#head table {
+	width: 40%;
+	margin-left: 4%;
+}
+
+#head table #logo {
+	width: 12%;
+}
+
+#head table #title {
+	width: 88%;
+	padding-left: 5%;
+}
+
+#head table img {
+	width: 100%;
+}
+
+#head table span {
+	font-size: 170%;
+	color: black;
+}
+
+#main {
+	width: 90%;
+	margin-top: 4%;
+	padding-bottom: 5%;
+}
+
+#main table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+#main table td {
+	vertical-align: top;
+}
+
+#upload {
+	text-align: center;
+}
+
+#upload-preview {
+	/*
+	border: 2px solid #00ba00;
+	background-color: #f1f3f4;
+	*/
+	border-radius: 15px 15px;
+	width: 90%;
+	padding-bottom: 60%;
+}
+
+#arrow {
+	padding-top: 55%;
+	text-align: center;
+}
+
+#arrow img {
+	width: 100%;
+}
+
+
+/** 푸터 영역 */
+
+#footer {
+	background-color: #f1f3f4;
+	position: fixed;
+	z-index: 0;
+	bottom: 0;
+	width: 100%;
+	padding-top: 1.6%;
+	padding-bottom: 2%;
+	padding-left: 8%;
+}
+
+#footer img {
+	width: 3%;
+	cursor: default;
+}
+
+#footer span {
+	font-size: 120%;
+	padding-left: 1%;
+	cursor: pointer;
+}
+
+#btn1 {
+	background-color: #00ba00;
+	border-radius: 20px;
+	display: inline-block;
+	cursor: pointer;
+	color: white;
+	font-size: 115%;
+	padding: 2% 5%;
+	text-decoration:none;
+}
+
+#btn1:active {
+	position:relative;
+	top:1px;
+}
+
+#filename {
+	border: 2px solid #00ba00;
+	border-radius: 5px 5px;
+	padding: 2% 3.5%;
+}
+
+        
