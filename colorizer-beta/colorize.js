@@ -42,6 +42,8 @@ module.exports = function() {
 						stat = Math.ceil(i / per);
 						console.log(stat + "% completed...");
 					}
+
+					//console.log("["+i+"]["+j+"] => " + rgb_values[i][j - 1] + "\n");
 				}
 			
 				png("image/result/" + filename, width, height, rgb_values);

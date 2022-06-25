@@ -74,6 +74,13 @@ body {
 	padding-bottom: 60%;
 }
 
+#result-preview {
+	
+	border-radius: 15px 15px;
+	width: 90%;
+	margin-left: 5%;
+}
+
 #arrow {
 	padding-top: 55%;
 	text-align: center;

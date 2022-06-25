@@ -53,11 +53,22 @@ upload_image.onchange = (evt) => {
 					xhttp_get.open("GET", "colorizer-beta/colorize?img=" + file.name, false);
 					xhttp_get.send(null);
 
-					xhttp_get.onreadystatechange = function() {
-						if (xhttp_get.status == 200) {
-						document.getElementById("result-preview").src = "/asset/image/result" + file.name;
-						}
-					}
+					var src = "/image/result/" + file.name;
+					
+					setInterval(() => {
+
+						$.ajax({
+							url:src,
+							type:'HEAD',
+							success: function() {
+								
+								$("#result-preview").attr("src", src);
+								stat.innerHTML = "Complete";
+							}
+						});
+
+					}, 2000);
+					
 				}
 			}
 			
